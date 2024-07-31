@@ -3,18 +3,28 @@
  * 
  * Board:   LaskaKit ESP32-C6-DEVkit
  * Sensor:  LaskaKit SHT40 Humidity & Temp Sensor       https://www.laskakit.cz/laskakit-sht40-senzor-teploty-a-vlhkosti-vzduchu/
+ * Display: LaskaKit OLED displej 128x32 0.91" I²C
  * 
  * Email:podpora@laskakit.cz
  * Web:laskakit.cz
  */
 
-// Requires Adafruit SHT4x library
+// Requires Adafruit SHT4x Adafruit_GFX and Adafruit_SSD1306 library
 
+#include <SPI.h>
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
 #include "Adafruit_SHT4x.h"
+
 #define PIN_ON 11
 #define PIN_SCL 5
 #define PIN_SDA 4
+#define SCREEN_ADDRESS 0x3C
+#define SCREEN_WIDTH 128 // OLED display width, in pixels
+#define SCREEN_HEIGHT 32 // OLED display height, in pixels
 
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 Adafruit_SHT4x sht4 = Adafruit_SHT4x();
 
 void setup() {
@@ -77,7 +87,13 @@ void setup() {
        Serial.println("Low heat for 0.1 second");
        break;
   }
-  
+  // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
+  if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
+    Serial.println(F("SSD1306 allocation failed"));
+    for(;;); // Don't proceed, loop forever
+  }
+  // Clear the buffer
+  display.clearDisplay();
 }
 
 
@@ -90,6 +106,17 @@ void loop() {
 
   Serial.print("Temperature: "); Serial.print(temp.temperature); Serial.println(" degrees C");
   Serial.print("Humidity: "); Serial.print(humidity.relative_humidity); Serial.println("% rH");
+
+  display.clearDisplay();
+
+  display.setTextSize(1);      // Normal 1:1 pixel scale
+  display.setTextColor(SSD1306_WHITE); // Draw white text
+  display.setCursor(0, 5);     // Start at top-left corner
+  display.cp437(true);         // Use full 256 char 'Code Page 437' font
+
+  display.println("Temperature: " + String(temp.temperature) + "C");
+  display.println("Humidity: " + String(temp.relative_humidity) + "%");
+  display.display();
 
   Serial.print("Read duration (ms): ");
   Serial.println(timestamp);

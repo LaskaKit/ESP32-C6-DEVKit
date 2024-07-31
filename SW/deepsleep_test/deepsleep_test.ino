@@ -1,7 +1,7 @@
-// Deep sleep test, ESP32-C6 is getting 14µA 
+// Deep sleep test, ESP32-C6 is getting 13µA 
 
 #define SLEEP_SEC 15         // Measurement interval (seconds)
-#define POWER 13
+#define POWER 11
 
 void setup(void)
 {
