@@ -1,4 +1,4 @@
-![ESP32-C6 DevKit]([http://url/to/img.png](https://github.com/LaskaKit/ESP32-C6-DEVKit/blob/main/images/esp32-c6-devkit.JPG)
+![ESP32-C6 DevKit](https://github.com/LaskaKit/ESP32-C6-DEVKit/blob/main/images/esp32-c6-devkit.JPG)
 
 # ESP32-C6 DEVkit
 
