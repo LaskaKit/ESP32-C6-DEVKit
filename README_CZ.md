@@ -12,4 +12,22 @@ Deska již obsahuje integrovaný programátor a tak již není nutné žádný j
 
 Pro co nejrychlejší start s ESP32-C6 DevKit jsme pro tebe připravili vzorové kódy https://github.com/LaskaKit/ESP32-C6-DEVKit/tree/main/SW 
 
+I2C (uŠup): 
+SDA - IO4 
+SCL - IO5
+Napájení - IO11 (active HIGH)
+
+Měření baterie:
+IO3
+
+RGB LED:
+Data - IO9
+
+SPI (uŠup):
+CS - IO18
+SDI/MOSI - IO7
+CLK - IO6
+MISO - IO2
+Napájení - IO11 (active HIGH)
+
 ## Deska je k dostání na https://www.laskakit.cz/laskakit-esp32-c6-devkit-wifi-6--bluetooth-5--zigbee/ 
