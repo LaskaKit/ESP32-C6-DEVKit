@@ -12,22 +12,22 @@ The board already contains an integrated programmer and so there is no need to u
 
 For the quick start with this development board with ESP32-C6, we wrote several example codes https://github.com/LaskaKit/ESP32-C6-DEVKit/tree/main/SW
 
-I2C (uŠup): 
-SDA - IO4 
-SCL - IO5
-Power - IO11 (active HIGH)
-
-Baterry voltage measurement:
-IO3
-
-RGB LED:
-Data - IO9
-
-SPI (uŠup):
-CS - IO18
-SDI/MOSI - IO7
-CLK - IO6
-MISO - IO2
-Power - IO11 (active HIGH)
-
+I2C (uŠup): </br>
+SDA - IO4 </br>
+SCL - IO5</br>
+Power - IO11 (active HIGH)</br>
+</br>
+Baterry voltage measurement:</br>
+IO3</br>
+</br>
+RGB LED:</br>
+Data - IO9</br>
+</br>
+SPI (uŠup):</br>
+CS - IO18</br>
+SDI/MOSI - IO7</br>
+CLK - IO6</br>
+MISO - IO2</br>
+Power - IO11 (active HIGH)</br>
+</br>
 ## You can buy on https://www.laskakit.cz/laskakit-esp32-c6-devkit-wifi-6--bluetooth-5--zigbee/ 
