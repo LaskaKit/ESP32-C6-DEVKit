@@ -1,5 +1,5 @@
 /* Board test for LaskaKit ESP32-C6-DEVkit
- * example from DAllaTemperature library by Miles Burton is used
+ * example from DAllasTemperature library by Miles Burton is used
  * 
  * Board:   LaskaKit ESP32-C6-DEVkit                              https://www.laskakit.cz/laskakit-esp32-c6-devkit-wifi-6--bluetooth-5--zigbee/
  * Sensor:  Maxim Integrated DS18B20+ digital temperature sensor  https://www.laskakit.cz/maxim-integrated/
@@ -8,6 +8,7 @@
  * Web:laskakit.cz
  */
 
+//// Does not compile for ESP32-C6 because off error in DAllasTemperature library by Miles Burton
 
 #include <OneWire.h>
 #include <DallasTemperature.h>
