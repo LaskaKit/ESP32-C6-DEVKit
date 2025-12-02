@@ -1,7 +1,7 @@
 /* Board test for LaskaKit ESP32-C6-DEVkit
  * ESP32-C6-DEVKit just changing LED color
  * 
- * Board:   LaskaKit ESP32-C6-DEVkit
+ * Board:   LaskaKit ESP32-C6-DEVkit  https://www.laskakit.cz/laskakit-esp32-c6-devkit-wifi-6--bluetooth-5--zigbee/
  * 
  * Email:podpora@laskakit.cz
  * Web:laskakit.cz

@@ -1,9 +1,9 @@
 /* Board test for LaskaKit ESP32-C6-DEVkit
  * example from Adafruit library is used
  * 
- * Board:   LaskaKit ESP32-C6-DEVkit
+ * Board:   LaskaKit ESP32-C6-DEVkit                    https://www.laskakit.cz/laskakit-esp32-c6-devkit-wifi-6--bluetooth-5--zigbee/
  * Sensor:  LaskaKit SHT40 Humidity & Temp Sensor       https://www.laskakit.cz/laskakit-sht40-senzor-teploty-a-vlhkosti-vzduchu/
- * Display: LaskaKit OLED displej 128x32 0.91" I²C
+ * Display: LaskaKit OLED displej 128x32 0.91" I²C      https://www.laskakit.cz/laskakit-oled-displej-128x32-0-91--i--c/
  * 
  * Email:podpora@laskakit.cz
  * Web:laskakit.cz
